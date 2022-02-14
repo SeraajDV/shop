@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digirosity</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script src="js/app.js" defer></script>
+</head>
+<body onload="productsInCart()">
+  <!-- HEADER -->
+  <nav>
+    <a class="brand" href="/">
+      <p>Digirosity</p>
+    </a>
+    <ul class="menu">
+      <li class="menu-link"><a href="/">Home</a></li>
+      <li class="menu-link"><a href="./about.html">About us</a></li>
+      <li class="menu-link active"><a href="./catalogue.html">Catalogue</a></li>
+      <li class="menu-link cart"><a href="./cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-amount"></span></a></li>
+    </ul>
+  </nav>
+  <!-- HEADER END -->
+
+  <!-- MAIN -->
+  <main class="main-catalogue">
+    <h1 class="land-heading">Check out our <span class="main-span">catalogue</span> </h1>
+    <div class="catalogue-main">
+      <section class="sidebar">
+        <h2 class="filter heading2">Filters</h2>
+        <div class="filter">
+          <h3 class="heading3">Price</h3>
+          <p class="label range-amount">R 0</p>
+          <div class="range">
+            <p class="label">R 0</p>
+            <input class="slider" type="range" min="0" max="30000" step="1000" value="0">
+            <p class="label">R 30 000</p>
+          </div>
+        </div>
+        <div class="filter">
+          <h3 class="heading3">Availability</h3>
+          <div class="radio">
+            <input type="radio" name="available" value="1">
+            <p class="label">In Stock</p>
+          </div>
+          <div class="radio">
+            <input type="radio" name="available" value="2">
+            <p class="label">Up to 3 days</p>
+          </div>
+          <div class="radio">
+            <input type="radio" name="available" value="3">
+            <p class="label">Up to 7 days</p>
+          </div>
+          <div class="radio">
+            <input type="radio" name="available" value="4">
+            <p class="label">Up to 12 days</p>
+          </div>
+        </div>
+        <div class="filter">
+          <h3 class="heading3">Brand</h3>
+          <div class="radio">
+            <input type="checkbox" name="brand" value="1">
+            <p class="label">Apple</p>
+          </div>
+          <div class="radio">
+            <input type="checkbox" name="brand" value="2">
+            <p class="label">Acer</p>
+          </div>
+          <div class="radio">
+            <input type="checkbox" name="brand" value="3">
+            <p class="label">Dell</p>
+          </div>
+          <div class="radio">
+            <input type="checkbox" name="brand" value="4">
+            <p class="label">HP</p>
+          </div>
+          <div class="radio">
+            <input type="checkbox" name="brand" value="5">
+            <p class="label">Lenovo</p>
+          </div>
+        </div>
+        <div class="filter">
+          <h3 class="heading3">RAM Size</h3>
+          <div class="radio">
+            <input type="radio" name="ram" value="1">
+            <p class="label">2 GB - 4 GB</p>
+          </div>
+          <div class="radio">
+            <input type="radio" name="ram" value="2">
+            <p class="label">4 GB - 8 GB</p>
+          </div>
+          <div class="radio">
+            <input type="radio" name="ram" value="3">
+            <p class="label">8 GB - 16 GB</p>
+          </div>
+          <div class="radio">
+            <input type="radio" name="ram" value="4">
+            <p class="label">16 GB - 32 GB</p>
+          </div>
+        </div>
+        <div class="filter">
+          <h3 class="heading3">CPU Type</h3>
+          <div class="radio">
+            <input type="checkbox" name="cpu" value="1">
+            <p class="label">Intel Core i5</p>
+          </div>
+          <div class="radio">
+            <input type="checkbox" name="cpu" value="2">
+            <p class="label">Intel Core i7</p>
+          </div>
+          <div class="radio">
+            <input type="checkbox" name="cpu" value="3">
+            <p class="label">Apple M1</p>
+          </div>
+          <div class="radio">
+            <input type="checkbox" name="cpu" value="4">
+            <p class="label">AMD Ryzen 5</p>
+          </div>
+          <div class="radio">
+            <input type="checkbox" name="brand" value="5">
+            <p class="label">AMD Ryzen 7</p>
+          </div>
+        </div>
+      </section>
+      <section class="catalogue">
+        <div class="top-sort">
+          <div class="left">
+            <p class="p2 product-results"></p>
+          </div>
+          <div class="right">
+            <p class="p2">Sort by:</p>
+            <select class="sort">
+              <option value="1">Relevance</option>
+              <option value="2">Price: High to Low</option>
+              <option value="3">Price: Low to High</option>
+              <option value="4">Top Rated</option>
+              <option value="5">Newest Arrival</option>
+            </select>
+          </div>
+        </div>
+        <div class="products">
+          <!-- PRODUCTS -->
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- MAIN END -->
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Digirosity</p>
+    <p>All rights reserved</p>
+  </footer>
+  <!-- FOOTER END -->
+<script>
+  console.log(JSON.parse(localStorage.getItem('productDetails')))
+</script>
+</body>
+</html>
